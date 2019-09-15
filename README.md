@@ -1,4 +1,4 @@
-# GitHub Repo Browser
+# GithubRepos
 
 TypeScript, VueJs, Vuex
 
