@@ -10,7 +10,7 @@ export class HttpService {
     }
 
     const error: Http.HttpError<T> = {
-      ...response,
+      status: response.status,
       data
     };
 

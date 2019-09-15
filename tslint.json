@@ -16,6 +16,7 @@
     "member-access": [true, "no-public"],
     "curly": false,
     "no-unused-expression": false,
-    "no-console": [true, "warning"]
+    "no-console": [true, "warning"],
+    "no-string-throw": false
   }
 }

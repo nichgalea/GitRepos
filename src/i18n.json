@@ -1,10 +1,27 @@
 {
   "en": {
     "language-name": "English",
-    "intro": "my name is paul"
+    "dashboard": {
+      "add-repository": "Add Repository",
+      "saved-title": "Saved Repositories"
+    },
+    "add-repository": {
+      "title": "Add Repository",
+      "invalid-url": "Repository URL is invalid.",
+      "not-found": "Couldn't find a repository with that URL.",
+      "exists": "This repository is already saved."
+    },
+    "repository-summary": {
+      "name": "Name",
+      "owner": "Owner"
+    },
+    "common": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "loading": "Loading..."
+    }
   },
   "es": {
-    "language-name": "Español",
-    "intro": "me ama pablo"
+    "language-name": "Español"
   }
 }

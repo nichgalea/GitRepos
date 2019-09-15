@@ -1,17 +1,67 @@
-@mixin tablet() {
+@import "./colors";
+
+@mixin tablet {
   @media screen and (max-width: 768px) {
     @content;
   }
 }
 
-@mixin small-phone() {
+@mixin small-phone {
   @media screen and (max-width: 340px) {
     @content;
   }
 }
 
-@mixin large-phone() {
+@mixin large-phone {
   @media screen and (max-width: 440px) {
     @content;
+  }
+}
+
+@mixin button($outline: false) {
+  appearance: none;
+  border: 0;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 12px;
+  display: block;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  @if $outline {
+    border: 1px solid $primary;
+    background: transparent;
+    color: $primary;
+
+    &:hover {
+      background: lighten($primary, 5%);
+      color: white;
+    }
+
+    &:active {
+      background: darken($primary, 5%);
+      color: white;
+    }
+  } @else {
+    background: $primary;
+    color: white;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      background: lighten($primary, 5%);
+    }
+
+    &:active {
+      background: darken($primary, 5%);
+    }
+  }
+
+  @include large-phone {
+    width: 100%;
   }
 }

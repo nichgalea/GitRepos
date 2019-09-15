@@ -6,7 +6,8 @@ const GITHUB_API = "https://api.github.com";
 export class RepositoryService {
   async getRepository(url: string): Promise<GitHub.Repository> {
     const repoUrl = new URL(url);
-    return await httpService.get<GitHub.Repository>(`${GITHUB_API}/${repoUrl.pathname}`);
+    const base = `${GITHUB_API}/repos`;
+    return await httpService.get<GitHub.Repository>(`${base}${repoUrl.pathname}`);
   }
 
   async getContributers(repository: string | GitHub.Repository): Promise<GitHub.Contributor[]> {

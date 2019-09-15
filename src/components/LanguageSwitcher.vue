@@ -6,7 +6,7 @@
       <li
         v-for="l in languages"
         :key="l"
-        @click="handleLanaguageClick(l)"
+        @click.stop="handleLanaguageClick(l)"
       >{{i18n[l]["language-name"]}}</li>
     </ul>
   </div>
@@ -57,6 +57,7 @@ export default class LanguageSwitcher extends Vue {
 @import "@/styles/colors";
 
 .language-switcher {
+  z-index: 10;
   position: relative;
   cursor: pointer;
   user-select: none;

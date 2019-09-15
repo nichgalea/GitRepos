@@ -3,7 +3,6 @@
     <Header />
 
     <main>
-      {{"intro" | translate}}
       <router-view />
     </main>
   </div>
@@ -24,6 +23,10 @@ export default class App extends Vue {}
 <style lang="scss">
 @import "@/styles/mixins";
 
+* {
+  outline: none;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,6 +35,14 @@ export default class App extends Vue {}
 
   main {
     margin-top: 60px;
+
+    @include large-phone {
+      margin-top: 40px;
+    }
+
+    @include small-phone {
+      margin-top: 40px;
+    }
   }
 }
 </style>
