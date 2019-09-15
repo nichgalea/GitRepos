@@ -34,37 +34,37 @@
     }
   },
   "es": {
-    "language-name": "Español",
+    "language-name": "Espanol",
     "dashboard": {
-      "add-repository-button": "Add Repository",
-      "saved-title": "Saved Repositories"
+      "add-repository-button": "Añade Repositorio",
+      "saved-title": "Archivo de Repositorios"
     },
     "add-repository": {
-      "title": "Add Repository",
-      "invalid-url": "Repository URL is invalid.",
-      "not-found": "Couldn't find a repository with that URL.",
-      "exists": "This repository is already saved."
+      "title": "Añade un Depósito",
+      "invalid-url": "Repositorio URL es inválido.",
+      "not-found": "El URL solicitado no se ha podido conseguir.",
+      "exists": "Este depósito ya ha sido guardado."
     },
     "repository-summary": {
-      "name": "Name",
-      "owner": "Owner"
+      "name": "Nombre",
+      "owner": "Propietario"
     },
     "repository-details": {
-      "delete-button": "Delete",
-      "contributors-title": "Contributors",
-      "not-found": "Couldn't find a repository with that URL.",
+      "delete-button": "Eliminar",
+      "contributors-title": "Colaboradores",
+      "not-found": "El URL solicitado no se ha podido conseguir.",
       "contributors-table": {
-        "username-column": "Username",
-        "profile-link-column": "Profile",
+        "username-column": "El nombre del usuario",
+        "profile-link-column": "Perfil del usuario",
         "commits-column": "Commits",
-        "owner-label": "Owner"
+        "owner-label": "Propietario"
       }
     },
     "common": {
-      "save": "Save",
-      "cancel": "Cancel",
-      "loading": "Loading...",
-      "back": "Back"
+      "save": "Guardar",
+      "cancel": "Cancela",
+      "loading": "Cargando...",
+      "back": "Regresa"
     }
   }
 }
