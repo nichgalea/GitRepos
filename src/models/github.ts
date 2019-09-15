@@ -100,3 +100,7 @@ export interface User {
   type: string;
   site_admin: boolean;
 }
+
+export interface Contributor extends User {
+  contributions: number;
+}

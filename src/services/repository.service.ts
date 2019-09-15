@@ -10,8 +10,8 @@ export class RepositoryService {
     return await httpService.get<GitHub.Repository>(`${base}${githubUrl.pathname}`);
   }
 
-  async getContributers(contributorsUrl: string): Promise<GitHub.User[]> {
-    return await httpService.get<GitHub.User[]>(contributorsUrl);
+  async getContributers(contributorsUrl: string): Promise<GitHub.Contributor[]> {
+    return await httpService.get<GitHub.Contributor[]>(contributorsUrl);
   }
 }
 
