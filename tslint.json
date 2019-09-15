@@ -2,7 +2,7 @@
   "defaultSeverity": "warning",
   "extends": ["tslint:recommended"],
   "linterOptions": {
-    "exclude": ["node_modules/**"]
+    "exclude": ["node_modules/**", "**/*.json"]
   },
   "rules": {
     "indent": [true, "spaces", 2],
@@ -12,6 +12,10 @@
     "ordered-imports": false,
     "quotemark": [true, "double"],
     "trailing-comma": false,
-    "arrow-parens": false
+    "arrow-parens": false,
+    "member-access": [true, "no-public"],
+    "curly": false,
+    "no-unused-expression": false,
+    "no-console": [true, "warning"]
   }
 }
