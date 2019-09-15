@@ -37,8 +37,9 @@
 
 <script lang="ts">
 import { Vue, Component, Watch } from "vue-property-decorator";
-import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 import debounce from "lodash/debounce";
+import { Dictionary } from "lodash";
 import * as GitHub from "@/models/github";
 import repositoryService from "@/services/repository.service";
 import RepositorySummary from "./RepositorySummary.vue";
@@ -47,14 +48,14 @@ import RepositorySummary from "./RepositorySummary.vue";
   components: {
     RepositorySummary
   },
-  computed: mapState(["repositories"])
+  computed: mapGetters(["repositoryMap"])
 })
 export default class AddRepository extends Vue {
   loading = false;
   error = "";
   repoUrl = "";
   repository: GitHub.Repository | null = null;
-  repositories!: GitHub.Repository[];
+  repositoryMap!: Dictionary<GitHub.Repository>;
   debouncedGetGitHubRepo!: () => void;
 
   created() {
@@ -87,7 +88,7 @@ export default class AddRepository extends Vue {
       const url = new URL(trimmedRepoUrl);
       this.repository = await repositoryService.getRepository(url.toString());
 
-      if (this.repositories.some(r => r.id === this.repository!.id)) {
+      if (this.repository!.id in this.repositoryMap) {
         throw "exists";
       }
 

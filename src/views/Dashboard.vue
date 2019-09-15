@@ -5,13 +5,15 @@
     <button
       class="add-repo-btn"
       @click.stop="isAddRepoOpen = !isAddRepoOpen"
-    >+ {{ "dashboard.add-repository" | translate }}</button>
+    >+ {{ "dashboard.add-repository-button" | translate }}</button>
 
     <div>
       <h2 class="saved-title">{{"dashboard.saved-title" | translate}}</h2>
 
       <ul class="repo-list">
-        <li v-for="repo of repositories" :key="repo.id">{{repo.full_name}}</li>
+        <li v-for="repo of repositories" :key="repo.id">
+          <router-link :to="`/${repo.id}`">{{repo.full_name}}</router-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -62,7 +64,6 @@ export default class Dashboard extends Vue {
   li {
     text-align: center;
     padding: 8px 0;
-    cursor: pointer;
 
     &:hover {
       background: lighten(lightgray, 10%);

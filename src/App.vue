@@ -44,5 +44,9 @@ export default class App extends Vue {}
       margin-top: 40px;
     }
   }
+
+  a {
+    color: $primary;
+  }
 }
 </style>

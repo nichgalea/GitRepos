@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import VuexPersist from "vuex-persist";
 import * as GitHub from "@/models/github";
+import keyBy from "lodash/keyBy";
 
 Vue.use(Vuex);
 
@@ -39,5 +40,9 @@ export default new Vuex.Store<State>({
       commit("removeRepository", repoId);
     }
   },
+  getters: {
+    repositoryMap: state => keyBy(state.repositories, "id")
+  },
+
   plugins: [vuexLocal.plugin]
 });

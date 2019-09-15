@@ -2,7 +2,7 @@
   "en": {
     "language-name": "English",
     "dashboard": {
-      "add-repository": "Add Repository",
+      "add-repository-button": "Add Repository",
       "saved-title": "Saved Repositories"
     },
     "add-repository": {
@@ -15,13 +15,56 @@
       "name": "Name",
       "owner": "Owner"
     },
+    "repository-details": {
+      "delete-button": "Delete",
+      "contributors-title": "Contributors",
+      "not-found": "Couldn't find a repository with that URL.",
+      "contributors-table": {
+        "username-column": "Username",
+        "profile-link-column": "Profile",
+        "commits-column": "Commits",
+        "owner-label": "Owner"
+      }
+    },
     "common": {
       "save": "Save",
       "cancel": "Cancel",
-      "loading": "Loading..."
+      "loading": "Loading...",
+      "back": "Back"
     }
   },
   "es": {
-    "language-name": "Español"
+    "language-name": "Español",
+    "dashboard": {
+      "add-repository-button": "Add Repository",
+      "saved-title": "Saved Repositories"
+    },
+    "add-repository": {
+      "title": "Add Repository",
+      "invalid-url": "Repository URL is invalid.",
+      "not-found": "Couldn't find a repository with that URL.",
+      "exists": "This repository is already saved."
+    },
+    "repository-summary": {
+      "name": "Name",
+      "owner": "Owner"
+    },
+    "repository-details": {
+      "delete-button": "Delete",
+      "contributors-title": "Contributors",
+      "not-found": "Couldn't find a repository with that URL.",
+      "contributors-table": {
+        "username-column": "Username",
+        "profile-link-column": "Profile",
+        "commits-column": "Commits",
+        "owner-label": "Owner"
+      }
+    },
+    "common": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "loading": "Loading...",
+      "back": "Back"
+    }
   }
 }
